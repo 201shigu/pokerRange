@@ -4,34 +4,48 @@
 <meta charset="UTF-8">
 <title>トランプ表</title>
 <style>
+  #contentContainer {
+    display: flex;
+    align-items: flex-start;
+  }
+
   table {
     border-collapse: collapse;
+    margin-right: 20px; /* コンボテーブルとの間隔を設定 */
   }
-  td {
+
+  td, th {
     width: 50px;
     height: 50px;
     border: 1px solid black;
     text-align: center;
     vertical-align: middle;
-    cursor: pointer;
   }
+
   .colored {
     background-color: yellow;
+  }
+
+  .header {
+    background-color: lightgrey;
   }
 </style>
 </head>
 <body>
 
-<input type="text" id="saveName" placeholder="ファイル名">
-<button id="saveButton">保存</button>
-<button id="resetButton">リセット</button>
+<div id="contentContainer">
+  <div id="cardsTableContainer">
+    <input type="text" id="saveName" placeholder="ファイル名">
+    <button id="saveButton">保存</button>
+    <button id="resetButton">リセット</button>
+    <input type="file" id="fileUpload" webkitdirectory directory multiple style="display: none;">
+    <button id="uploadButton">アップロード</button>
 
-<input type="file" id="fileUpload" webkitdirectory directory multiple style="display: none;">
-<button id="uploadButton">アップロード</button>
-
-<table id="cardsTable"></table>
-<div id="comboTableContainer"></div>
-<div id="restoreButtons"></div>
+    <table id="cardsTable"></table>
+    <div id="restoreButtons"></div>
+  </div>
+  <div id="comboTableContainer"></div>
+</div>
 
 <script src="tableCreation.js"></script>
 <script src="highlightManagement.js"></script>

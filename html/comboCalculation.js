@@ -20,7 +20,7 @@ function updateComboTable() {
     comboTableContainer.innerHTML = ''; // 古いテーブルのクリア
     const table = document.createElement('table');
     const headerRow = table.insertRow();
-    ['タイプ', 'コンボ数', '割合'].forEach(text => {
+    ['', 'コンボ数', '割合'].forEach(text => {
       const cell = headerRow.insertCell();
       cell.textContent = text;
     });
