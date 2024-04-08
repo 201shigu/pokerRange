@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>トランプ表</title>
+<style>
+  table {
+    border-collapse: collapse;
+  }
+  td {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .colored {
+    background-color: yellow;
+  }
+</style>
+</head>
+<body>
+
+<input type="text" id="saveName" placeholder="ファイル名">
+<button id="saveButton">保存</button>
+<button id="resetButton">リセット</button>
+
+<input type="file" id="fileUpload" webkitdirectory directory multiple style="display: none;">
+<button id="uploadButton">アップロード</button>
+
+<table id="cardsTable"></table>
+<div id="comboTableContainer"></div>
+<div id="restoreButtons"></div>
+
+<script src="tableCreation.js"></script>
+<script src="highlightManagement.js"></script>
+<script src="comboCalculation.js"></script>
+<script src="stateManagement.js"></script>
+</body>
+</html>
